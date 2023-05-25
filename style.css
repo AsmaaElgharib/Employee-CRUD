@@ -1,0 +1,51 @@
+th{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.carousel-caption{
+    background-color:rgba(0, 0, 0,.6);
+    border-radius: 25px;
+}
+
+.thumbnail{
+    width: auto;
+    height: 50px;
+    cursor: pointer;
+}
+
+.modal-content{
+    border-radius: 0;
+}
+
+/* @media (min-width: 768px){
+    .modal-sm{
+        max-width: 40%;
+    }
+} */
+
+/* .empdata{
+    background-color: rgb(124, 166, 179);
+} */
+
+/* Responsive */
+
+/* small devices (tablets, and up) */
+@media (min-width: 768px){
+
+}
+
+/* Medium devices (desctops, and up) */
+@media (min-width:992px){
+    .modal{
+        max-width: 99%;
+    }
+}
+
+/* Medium devices (large desctops, and up) */
+@media (min-width:1200px){
+    .modal{
+        max-width: 99%;
+    }
+}
