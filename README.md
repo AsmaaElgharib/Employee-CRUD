@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <head>
     <title>Employees Application</title>
     <link type="text/css" rel="stylesheet" href="style.css">
