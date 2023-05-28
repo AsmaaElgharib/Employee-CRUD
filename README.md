@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<head>
+    <title>Employees Application</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+
+<body data-toggle="modal" data-target="#emp">
+  
+    
+    <!-- form and table -->
+    <div class="container p-3 mt-5"  onclick="event.stopPropagation();">
+        <h4>Employee Data</h4>
+        <form autocomplete="off" onsubmit="onFormSubmit()">
+            <div class="d-flex flex-column flex-md-row">
+                <div class="col-12 col-md-12">
+                    
+                    <div class="form-group">
+                        <label for="employeeId" class="control-label" required>Id</label>
+                        <input type="number" name="employeeId" id="employeeId" class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="employeeName" class="control-label" required>Name</label>
+                        <input type="text" name="employeeName" class="form-control" id="employeeName">
+                    </div>
+                    <div class="form-group">
+                        <label for="DOB" class="control-label">DOB</label>
+                        <input type="date" name="DOB" class="form-control" id="DOB">
+                    </div>
+                    <div class="form-group">
+                        <label for="department" class="control-label" required>Department</label>
+                        <input type="text" name="department" class="form-control" id="department">
+                    </div>
+                    <div class="form-group">
+                        <label for="netSalary" class="control-label" required>NetSalary</label>
+                        <input type="number" name="netSalary" class="form-control" id="netSalary" placeholder="netsalar + 1342">
+                    </div>
+                    <div class="form-group">
+                        <label for="photo" class="control-label" required>Image</label>
+                        <input type="file" name="photo" class="form-control-file" id="photo">
+                    </div>
+                     <!-- <div class="form-group">
+                         <label for="grossSalary" class="control-label">GrossSalary</label>
+                       <input type="number" readonly name="grossSalary" id="grossSalary" class="form-control" placeholder="netsalar + 1342">
+                     </div> -->
+                     
+                     <div class="form-group m-3 mx-5">
+                         <button type="submit" class="btn btn-success" data-toggle="tooltip" title="<b>Save</b> Your Application">Submit</button>
+                         <input class="btn btn-danger" type="reset" value="Reset" 
+                         data-toggle="modal" data-target="#emp" onclick="resetForm()">
+                        </div>
+                    </div>
+                </form>
+
+
+                
+                <!-------------------------------------------- Modal ----------------------------------------->
+                <div class="modal fade hide" tabindex="-1" id="emp">
+                    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Employees Table</h5>
+                                <button type="button" class="close" data-dismiss="modal">
+                                    <span>&times</span>
+                                </button>
+                            </div>
+                            
+                            <div class="modal-body">
+                                <div class="row ">
+                                    <div class="col-10">    
+                                        <table class="table table-striped table-hover empdata" id="empList">
+                                            <thead>
+                                                <tr class="table-primary">
+                                                    <th class="table-primary">Id</th>
+                                                    <th class="table-primary">Name</th>
+                                                    <th class="table-primary">DOB</th>
+                                                    <th class="table-primary">Department</th>
+                                                    <th class="table-primary">Image</th>
+                                                    <th class="table-primary">NetSalary</th>
+                                                    <th class="table-primary">GrossSalary</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" id="closebtn" type="button" data-dismiss="modal">Ok</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>              
+                
+            </div>
+                <!-- <div class="col-12 col-md-9">    
+                    <table class="table table-striped table-hover" id="empList2">
+                        <thead>
+                            <tr class="table-primary">
+                                <th class="table-primary">Id</th>
+                                <th class="table-primary">Name</th>
+                                <th class="table-primary">DOB</th>
+                                <th class="table-primary">Department</th>
+                                <th class="table-primary">Image</th>
+                                <th class="table-primary">NetSalary</th>
+                                <th class="table-primary">GrossSalary</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div> -->
+        </div>
+    
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="./readData.js"></script>
+    <script src="./edit.js"></script> 
+    <script src="./resetForm.js"></script>
+    <script src="./delete.js"></script>
+    <script src="./insertRow.js"></script>
+    <script src="updateRecord.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+</html>
